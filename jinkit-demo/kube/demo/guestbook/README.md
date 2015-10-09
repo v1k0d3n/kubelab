@@ -21,7 +21,7 @@ Use these instructions to produce something tangible quickly. After you've seen 
 kubectl create -f redis-master-controller.yaml
 ```
 
-OPTIONAL:
+*Optional Review:*
 
 ```
 kubectl get rc
@@ -36,7 +36,7 @@ kubectl logs redis-master-XXXXX
 kubectl create -f redis-master-service.yaml
 ```
 
-OPTIONAL:
+*Optional Review:*
 
 ```
 kubectl get services
@@ -49,7 +49,7 @@ kubectl describe services redis-master
 kubectl create -f redis-slave-controller.yaml
 ```
 
-OPTIONAL:
+*Optional Review:*
 
 ```
 kubectl get pods
@@ -67,7 +67,7 @@ kubectl create -f redis-slave-service.yaml
 kubectl create -f frontend-controller.yaml
 ```
 
-OPTIONAL:
+*Optional Review:*
 
 ```
 kubectl get rc
