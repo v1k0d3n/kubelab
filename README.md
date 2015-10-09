@@ -3,9 +3,9 @@
 ## The Skinny
 Use this repo as a set of examples. I've uploaded a set of working configurations for one Master and 5 nodes in a lab using Fedora and Atomic images. I'll eventually clean up this repo and make it more useful later (this was thrown up quickly).
 
-* kubemaster (*k8s master*)
-* kubenode01-05 (*k8s nodes/minions*)
-* kubelb01-02 (*vulcan loadbalancers*)
+* **kubemaster** (*k8s master*)
+* **kubenode01-05** (*k8s nodes/minions*)
+* **kubelb01-02** (*vulcan loadbalancers*)
 
 ## The Lab
 Lab environment is found in the `kube-config` directory.
