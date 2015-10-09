@@ -1,0 +1,6 @@
+# JinkIT Kubelet Configuration File
+KUBELET_ADDRESS="--address=0.0.0.0" 
+# KUBELET_PORT="--port=10250" 
+KUBELET_HOSTNAME="--hostname-override=kubemaster.jinkit.com" 
+KUBELET_API_SERVER="--api-servers=http://192.168.70.144:8080" 
+KUBELET_ARGS=""

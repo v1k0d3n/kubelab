@@ -1,0 +1,20 @@
+# JinkIT Kubernetes Hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+#
+# Kubernetes Hub
+192.168.70.83 microhub.jinkit.com microhub
+#
+# Kubernetes Master
+192.168.70.144 kubemaster.jinkit.com kubemaster
+#
+# Kubernetes Load Balancers
+192.168.70.145 kubelb01.jinkit.com kubelb01
+192.168.70.146 kubelb02.jinkit.com kubelb02
+#
+# Kubernetes Minions
+192.168.70.147 kubenode01.jinkit.com kubenode01
+192.168.70.148 kubenode02.jinkit.com kubenode02
+192.168.70.149 kubenode03.jinkit.com kubenode03
+192.168.70.150 kubenode04.jinkit.com kubenode04
+192.168.70.151 kubenode05.jinkit.com kubenode05

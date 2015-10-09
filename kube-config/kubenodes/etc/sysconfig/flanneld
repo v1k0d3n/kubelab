@@ -1,0 +1,4 @@
+# JinkIT Kubernetes flanneld Configuration
+FLANNEL_OPTIONS="eth0" 
+FLANNEL_ETCD="http://kubemaster.jinkit.com:2379" 
+FLANNEL_ETCD_KEY="/jinkit/network"

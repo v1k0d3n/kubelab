@@ -1,0 +1,11 @@
+# JinkIT Kubernetes Docker Configuration /etc/sysconfig/docker
+# ADD_REGISTRY='--add-registry registry.access.redhat.com'
+# BLOCK_REGISTRY='--block-registry'
+# INSECURE_REGISTRY='--insecure-registry'
+# setsebool -P docker_transition_unconfined 1
+# DOCKER_TMPDIR=/var/tmp
+# LOGROTATE=false
+#
+# JinkIT Kubernetes Options
+OPTIONS='--registry-mirror=http://microhub.jinkit.com:5000 --selinux-enabled'
+DOCKER_CERT_PATH=/etc/docker

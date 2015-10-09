@@ -1,0 +1,7 @@
+#cloud-config
+hostname: kubelb02.jinkit.com 
+password: atomic
+ssh_pwauth: True
+chpasswd: { expire: False }
+ssh_authorized_keys:
+- ssh-rsa <key>
