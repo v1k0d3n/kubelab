@@ -1,11 +1,91 @@
-<strong>
-The guestbook example is a spin-off of Google's Kuberentes Guestbook example (latest 1.0.x release) which can be found
-[here](http://releases.k8s.io/release-1.0/examples/guestbook/README.md). Changes include using "Nodeport" (portmapping to 31234) rather than "Loadbalancer". Eventually I will include documenation for using Vulcan load balacers.
+## Purpose
 
-Documentation for other releases can be found at
+The purpose for this example is to provide something tangible in a matter of minutes. Yes, you really do need to understand what's happening underneith it all, which is why I have kept Google's [very useful] documentation below. The source for this Guestbook Demo is located [here](http://releases.k8s.io/release-1.0/examples/guestbook/README.md).
+
+The changes that I've included use the `type: Nodeport` option (portmapping to 31234) rather than `type: Loadbalancer`.  One of the biggest hangups people have is understanding how the `LoadBalancer` option works. It prevents them from getting tangible results quickly. This is the whole purpose of this repository. I'll eventually include better/clearer documenation for using Vulcan load balacers that make use of the `type: Loadbalancer`.
+
+Upstream documentation for other releases can be found at:
 [releases.k8s.io](http://releases.k8s.io).
-</strong>
+
+I HIGHLY encourage you to read through the documenation. This is the biggest stumbling block for people.
+
 --
+
+## Quick Results
+
+Use these instructions to produce something tangible quickly. After you've seen how it all works, refer to the much more elaborate documentation I've retained from the k8s repository below.
+
+STEP 1: Create the Redis Master RC
+
+```
+kubectl create -f redis-master-controller.yaml
+```
+
+OPTIONAL:
+
+```
+kubectl get rc
+kubectl get pods
+kubectl describe pods/redis-master-XXXXX
+kubectl logs redis-master-XXXXX
+```
+
+STEP 2: Create the Redis Master Service
+
+```
+kubectl create -f redis-master-service.yaml
+```
+
+OPTIONAL:
+
+```
+kubectl get services
+kubectl describe services redis-master
+```
+
+STEP 3: Create Redis Slave RC
+
+```
+kubectl create -f redis-slave-controller.yaml
+```
+
+OPTIONAL:
+
+```
+kubectl get pods
+```
+
+STEP 4: Create the Redis Slave Service
+
+```
+kubectl create -f redis-slave-service.yaml
+```
+
+STEP 5: Create the Front-End RC
+
+```
+kubectl create -f frontend-controller.yaml
+```
+
+OPTIONAL:
+
+```
+kubectl get rc
+kubectl get pods
+```
+
+STEP 6: Create the Front-End Service
+
+```
+kubectl create -f frontend-service-np.yaml
+```
+
+Tear Down Lab:
+
+```
+kubectl stop rc -l "name in (redis-master, redis-slave, frontend)"
+kubectl delete service -l "name in (redis-master, redis-slave, frontend)"
+```
 
 ## Guestbook Example
 
