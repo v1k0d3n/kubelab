@@ -74,7 +74,7 @@ kubectl get rc
 kubectl get pods
 ```
 
-#### STEP 6: Create the Front-End Service
+#### STEP 6: Create the Front-End Service (NodePort: 31234)
 
 ```
 kubectl create -f frontend-service-np.yaml
