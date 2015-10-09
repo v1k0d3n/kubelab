@@ -4,7 +4,7 @@
 Use this repo as a set of examples. I've uploaded a set of working configurations for one Master and 5 nodes in a lab using Fedora and Atomic images. I'll eventually clean up this repo and make it more useful later (this was thrown up quickly).
 
 * kubemaster
-* kubeminion01-05
+* kubenode01-05
 * kubelb01-02
 
 ## The Lab
