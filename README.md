@@ -10,6 +10,9 @@ Use this repo as a set of examples. I've uploaded a set of working configuration
 ## The Lab
 Lab environment is found in the `kube-config` directory.
 
+## Guestbook NodePort Setup
+I've made the guestbook demo dead simple, by using `type: NodePort`. If that's all your looking for, and you want a really simple walkthrough, then head over to `jinkit-demo/kube/demo/guestbook`. To prevent any additional index-finger carpal tunnel, go to the README.md located [here](https://github.com/v1k0d3n/kubelab/tree/master/jinkit-demo/kube/demo/guestbook).
+
 ## Demo Files
 Demo files are located in the `jinkit-demo` directory. Most of the demo's are taken from the upstream Kubernetes project. I would strongly suggest using their vagrant lab first, as it has working DNS, TLS and some other nice additions. It's a complete solution. To take things further, I have included configurations for Kubernetes in an Atomic environment. Atomic has some interesting features including RPM-OSTree and Cockpit. Please review documentation at http://www.jinkit.com/kubernetes-lab-for-openstack/ for more information.
 
@@ -561,4 +564,3 @@ Finally, if you prefer to launch an RC, SVR, or POD from the Cockpit interface, 
 ![Details Management](jinkit-demo/images/Screen-Shot-2015-09-14-at-11-32-19-AM.png)
 
 So now you see how powerful tools like Cockpit and the tools built around the Kubernetes API and Atomic/Fedora really are. Pretty awesome stuff! Now you're ready to test on your own. Come back next week for details on Kubernetes and I'll instruct users how to bring up their own Vagrant demo (or use the Openstack lab we've already built) to show Kubernetes in action during a rolling update! For now, enjoy, test, destroy, and learn!
-
