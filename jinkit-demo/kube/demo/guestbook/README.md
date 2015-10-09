@@ -15,7 +15,7 @@ I HIGHLY encourage you to read through the documenation. This is the biggest stu
 
 Use these instructions to produce something tangible quickly. After you've seen how it all works, refer to the much more elaborate documentation I've retained from the k8s repository below.
 
-#### STEP 1: Create the Redis Master RC
+**STEP 1:** Create the Redis Master RC
 
 ```
 kubectl create -f redis-master-controller.yaml
@@ -30,7 +30,7 @@ kubectl describe pods/redis-master-XXXXX
 kubectl logs redis-master-XXXXX
 ```
 
-#### STEP 2: Create the Redis Master Service
+**STEP 2:** Create the Redis Master Service
 
 ```
 kubectl create -f redis-master-service.yaml
@@ -43,7 +43,7 @@ kubectl get services
 kubectl describe services redis-master
 ```
 
-#### STEP 3: Create Redis Slave RC
+**STEP 3:** Create Redis Slave RC
 
 ```
 kubectl create -f redis-slave-controller.yaml
@@ -55,13 +55,13 @@ OPTIONAL:
 kubectl get pods
 ```
 
-#### STEP 4: Create the Redis Slave Service
+**STEP 4:** Create the Redis Slave Service
 
 ```
 kubectl create -f redis-slave-service.yaml
 ```
 
-#### STEP 5: Create the Front-End RC
+**STEP 5:** Create the Front-End RC
 
 ```
 kubectl create -f frontend-controller.yaml
@@ -74,13 +74,13 @@ kubectl get rc
 kubectl get pods
 ```
 
-#### STEP 6: Create the Front-End Service (NodePort: 31234)
+**STEP 6:** Create the Front-End Service (NodePort: 31234)
 
 ```
 kubectl create -f frontend-service-np.yaml
 ```
 
-#### Tear Down Lab:
+**Tear Down Lab:**
 
 ```
 kubectl stop rc -l "name in (redis-master, redis-slave, frontend)"
