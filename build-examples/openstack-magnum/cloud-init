@@ -45,7 +45,7 @@ write_files:
         echo # Enable Magnum Support >> local.conf
         echo enable_plugin ceilometer https://git.openstack.org/openstack/ceilometer >> local.conf
         echo enable_plugin magnum https://git.openstack.org/openstack/magnum >> local.conf
-        echo PUBLIC_INTERFACE=eth0 >> local.conf
+        echo PUBLIC_INTERFACE=eth1 >> local.conf
         echo VOLUME_BACKING_FILE_SIZE=20G >> local.conf
         ./stack.sh
     path: /home/stack/start.sh
