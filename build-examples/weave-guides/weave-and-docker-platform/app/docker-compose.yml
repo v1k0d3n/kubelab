@@ -1,0 +1,11 @@
+web:
+  build: .
+  command: python app.py
+  ports:
+     - "5000"
+  hostname: hello.weave.local
+  environment:
+     - "affinity:container!=app_web_*"
+redis:
+  image: redis
+  hostname: redis.weave.local
