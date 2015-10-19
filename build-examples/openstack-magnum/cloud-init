@@ -46,7 +46,10 @@ write_files:
         echo enable_plugin ceilometer https://git.openstack.org/openstack/ceilometer >> local.conf
         echo enable_plugin magnum https://git.openstack.org/openstack/magnum >> local.conf
         echo PUBLIC_INTERFACE=eth1 >> local.conf
+        echo RECLONE=yes >> local.conf
         echo VOLUME_BACKING_FILE_SIZE=20G >> local.conf
+        echo auto eth1 > /etc/network/interfaces.d/eth1.cfg
+        echo iface eth1 inet dhcp >> /etc/network/interfaces.d/eth1.cfg
         ./stack.sh
     path: /home/stack/start.sh
     permissions: 0755
